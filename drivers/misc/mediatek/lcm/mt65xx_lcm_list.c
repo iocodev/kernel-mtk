@@ -28,6 +28,12 @@ enum LCM_DSI_MODE_CON lcm_dsi_mode;
 #define LCD_HW_ID_STATUS_ERROR  0x03
 
 struct LCM_DRIVER *lcm_driver_list[] = {
+#if defined(ST7701_WVGA_DSI_VDO_T720)
+	&st7701_wvga_dsi_vdo_T720_lcm_drv,
+#endif
+#if defined(ST7701_WVGA_DSI_VDO2_T720)
+	&st7701_wvga_dsi_vdo2_T720_lcm_drv,
+#endif
 #if defined(OTM1284A_HD720_DSI_VDO_TM)
 	&otm1284a_hd720_dsi_vdo_tm_lcm_drv,
 #endif
